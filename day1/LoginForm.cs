@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace day1
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -86,6 +86,11 @@ namespace day1
             MessageBox.Show("Please enter from the list.");
             comboBox1.Text = "";
             
+
+        }
+
+        private void textBox5_TextChanged_1(object sender, EventArgs e)
+        {
 
         }
     }
