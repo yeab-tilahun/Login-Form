@@ -93,6 +93,16 @@ namespace day1
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show("Provide ID");
+            DialogResult res = MessageBox.Show("Are you sure !", "Warning",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            string id = textBox1.Text;
+            DAL a = new DAL();
+            a.DelUserByStoreProc(textBox1.Text);
+        }
     }
         }
     

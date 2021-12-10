@@ -16,6 +16,8 @@ namespace day1
         public string password;
         public string Role;
 
+        public string id1;
+
         public User(string id, string fname, string mname, string Username, string password, string Role)
         {
             this.ID = id;
@@ -30,7 +32,7 @@ namespace day1
             MessageBox.Show(this.ID + " " + this.fname + " " + this.mname + " " + this.Username
                 + " " + this.password + " " + this.Role + " ");
             DAL layer2 = new DAL();
-            layer2.saveUser(this);
+            layer2.saveUserByStoreProc(this);
         }
     }
 }
