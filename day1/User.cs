@@ -34,5 +34,12 @@ namespace day1
             DAL layer2 = new DAL();
             layer2.saveUserByStoreProc(this);
         }
+        public void updateUSer()
+        {
+            MessageBox.Show(this.ID + " " + this.fname + " " + this.mname + " " + this.Username
+                + " " + this.password + " " + this.Role + " ");
+            DAL layer2 = new DAL();
+            layer2.updateUserByStoreProc(this);
+        }
     }
 }

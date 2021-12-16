@@ -82,6 +82,34 @@ namespace day1
             }
 
         }
+
+        public void updateUserByStoreProc(User u)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(constr))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("spUpdateUser", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@ID", u.ID);
+                    cmd.Parameters.AddWithValue("@mname", u.mname);
+                    cmd.Parameters.AddWithValue("@fname", u.fname);
+                    cmd.Parameters.AddWithValue("@Username", u.Username);
+                    cmd.Parameters.AddWithValue("@password", u.password);
+                    cmd.Parameters.AddWithValue("@Role", u.Role);
+                    int rowAffected = cmd.ExecuteNonQuery();
+                    con.Close();
+                    if (rowAffected > 0)
+                        MessageBox.Show("Save Sucessful");
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }
 

@@ -34,7 +34,7 @@ namespace day1
             if (pwd.CompareTo(cpwd) == 0)
             {
                 MessageBox.Show("The Password Match.");
-                User a = new User(textBox1.Text, textBox6.Text, textBox5.Text, textBox2.Text, textBox3.Text, textBox4.Text);
+                User a = new User(textBox1.Text, textBox6.Text, textBox5.Text, textBox2.Text, textBox3.Text, comboBox1.Text);
                 a.saveUSer();
 
             }
@@ -61,19 +61,7 @@ namespace day1
         private void textBox6_Leave(object sender, EventArgs e)
         {
             textBox6.Text = textBox6.Text.Substring(0, 1).ToUpper() + textBox6.Text.Substring(1).ToLower();
-         /*   string name = textBox6.Text;
-            int size = name.Length;
-            char[] Name = new char[size];                
-                for(int j=0; j<=size; j++)
-                {
-                    if (j == 0)
-                    {
-                        Name[j] = char.ToUpper(name[j]);
-                    }
-                    else
-                        Name[j] = char.ToLower(name[j]);
-                }
-                name = Convert.ToString(Name);*/
+        
             }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -102,6 +90,22 @@ namespace day1
             string id = textBox1.Text;
             DAL a = new DAL();
             a.DelUserByStoreProc(textBox1.Text);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            User a = new User(textBox1.Text, textBox6.Text, textBox5.Text, textBox2.Text, textBox3.Text, comboBox1.Text);
+            a.updateUSer();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
         }
