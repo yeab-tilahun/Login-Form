@@ -27,19 +27,31 @@ namespace day1
             this.password = password;
             this.Role = Role;
         }
+
+        //constractor to allow creation of user object with out parameter
+        public User() { }
         public void saveUSer()
         {
             MessageBox.Show(this.ID + " " + this.fname + " " + this.mname + " " + this.Username
                 + " " + this.password + " " + this.Role + " ");
-            DAL layer2 = new DAL();
-            layer2.saveUserByStoreProc(this);
+            DAL layer3 = new DAL();
+            layer3.saveUserByStoreProc(this);
         }
         public void updateUSer()
         {
             MessageBox.Show(this.ID + " " + this.fname + " " + this.mname + " " + this.Username
                 + " " + this.password + " " + this.Role + " ");
-            DAL layer2 = new DAL();
-            layer2.updateUserByStoreProc(this);
+            DAL layer3 = new DAL();
+            layer3.updateUserByStoreProc(this);
+        }
+        public void deleteUser(string id)
+        {
+            DialogResult res = MessageBox.Show("Are you sure !", "Warning",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+         
+            DAL layer3 = new DAL();
+            layer3.DelUserByStoreProc(id);
+           
         }
     }
 }
