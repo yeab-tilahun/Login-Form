@@ -17,8 +17,6 @@ namespace day1
         public string Role;
         public byte[] Photo;
 
-        public string id1;
-
         public User(string id, string fname, string mname, string Username, string password, string Role,byte [] Photo)
         {
             this.ID = id;
