@@ -56,14 +56,14 @@ namespace day1
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            /*string query = "Select fname,mname,Username,password,Role from cslab where ID=@ID";
+            string query = "Select fname,mname,Username,password,Role from cslab where ID=@ID";
             string constr = "Server=YEABS;   database=cslab; integrated security=true; ";
             if (textBox1.Text != "")
             {
                 using (SqlConnection con = new SqlConnection(constr))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("Select fname,mname,Username,password,Role from cslab where ID=@ID", con);
+                    SqlCommand cmd = new SqlCommand("Select fname,mname,Username,password,Role from tblUser where ID=@ID", con);
                     cmd.Parameters.AddWithValue("@ID", textBox1.Text);
                     SqlDataReader da = cmd.ExecuteReader();
                     while (da.Read())
@@ -76,7 +76,7 @@ namespace day1
                     }
                     con.Close();
                 }
-            }*/
+            }
         }
 
 
@@ -145,6 +145,11 @@ namespace day1
             {
                 pictureBox1.BackgroundImage = Image.FromFile(op.FileName);  
             }
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
         }
     }
         }
