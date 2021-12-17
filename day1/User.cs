@@ -15,10 +15,11 @@ namespace day1
         public string Username;
         public string password;
         public string Role;
+        public byte[] Photo;
 
         public string id1;
 
-        public User(string id, string fname, string mname, string Username, string password, string Role)
+        public User(string id, string fname, string mname, string Username, string password, string Role,byte [] Photo)
         {
             this.ID = id;
             this.fname = fname;
@@ -26,6 +27,7 @@ namespace day1
             this.Username = Username;
             this.password = password;
             this.Role = Role;
+            this.Photo = Photo;
         }
 
         //constractor to allow creation of user object with out parameter
@@ -33,7 +35,7 @@ namespace day1
         public void saveUSer()
         {
             MessageBox.Show(this.ID + " " + this.fname + " " + this.mname + " " + this.Username
-                + " " + this.password + " " + this.Role + " ");
+                + " " + this.password + " " + this.Role + " " + this.Photo + " ");
             DAL layer3 = new DAL();
             layer3.saveUserByStoreProc(this);
         }

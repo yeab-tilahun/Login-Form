@@ -14,7 +14,7 @@ namespace day1
         public void saveUser(User u)
         {
             string query = "INSERT INTO tblUser VALUES (' " + u.ID + " ', '" + u.fname + "','" + u.mname + "" +
-                " ', '" + u.Username + " ', '" + u.password + " ', '" + u.Role +"')";
+                " ', '" + u.Username + " ', '" + u.password + " ', '" + u.Role + " ', '" + u.Photo + "')";
             MessageBox.Show(query);
             //
             string constr= "Server=YEABS;   database=cslab; integrated security=true; ";
@@ -45,6 +45,7 @@ namespace day1
                     cmd.Parameters.AddWithValue("@Username", u.Username);
                     cmd.Parameters.AddWithValue("@password", u.password);
                     cmd.Parameters.AddWithValue("@Role", u.Role);
+                    cmd.Parameters.AddWithValue("@Photo", u.Photo);
                     int rowAffected = cmd.ExecuteNonQuery();
                     con.Close();
                     if (rowAffected > 0)
@@ -98,6 +99,7 @@ namespace day1
                     cmd.Parameters.AddWithValue("@Username", u.Username);
                     cmd.Parameters.AddWithValue("@password", u.password);
                     cmd.Parameters.AddWithValue("@Role", u.Role);
+                    cmd.Parameters.AddWithValue("@Photo", u.Photo);
                     int rowAffected = cmd.ExecuteNonQuery();
                     con.Close();
                     if (rowAffected > 0)
