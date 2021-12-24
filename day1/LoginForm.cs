@@ -58,6 +58,11 @@ namespace day1
         {
             string query = "Select fname,mname,Username,password,Role from cslab where ID=@ID";
             string constr = "Server=YEABS;   database=cslab; integrated security=true; ";
+            //image
+
+            /*byte[] photo = (byte[])dgUser.CurrentRow.Cells[6].Value;
+            MemoryStream ms = new MemoryStream(photo);*/
+            
             if (textBox1.Text != "")
             {
                 using (SqlConnection con = new SqlConnection(constr))
@@ -73,6 +78,7 @@ namespace day1
                         textBox2.Text = da.GetValue(2).ToString();
                         textBox3.Text = da.GetValue(3).ToString();
                         comboBox1.Text = da.GetValue(4).ToString();
+                        //pictureBox1.BackgroundImage = Image.FromStream(ms);
                     }
                     con.Close();
                 }
@@ -104,6 +110,7 @@ namespace day1
             
 
         }
+       
 
         private void textBox5_TextChanged_1(object sender, EventArgs e)
         {
@@ -151,6 +158,22 @@ namespace day1
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //search
+            User u = new User();
+            DataTable dt = u.getUser(textBox9.Text, textBox8.Text);
+            dgUser.DataSource = dt;
+
+            //image
+            byte [] photo = (byte[]) dgUser.CurrentRow.Cells[6].Value;
+            MemoryStream ms = new MemoryStream(photo);
+            pictureBox1.BackgroundImage = Image.FromStream(ms);
+
+
+        }
+
     }
         }
     

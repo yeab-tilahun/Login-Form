@@ -110,10 +110,24 @@ namespace day1
             {
                 MessageBox.Show(ex.Message);
             }
-            //yeabsira 
+        }
+        public DataTable getUser(string fn, string ln)
+            {
+                SqlConnection con = new SqlConnection(constr);
+                SqlDataAdapter da = new SqlDataAdapter("spGetUser", con);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@fn", fn);
+                da.SelectCommand.Parameters.AddWithValue("@ln", ln);
+
+                DataSet ds = new DataSet();
+                da.Fill(ds, "tblUser");
+                DataTable dt = ds.Tables["tblUser"];
+                return dt;
+
+            }
         }
     }
-}
+
 
     
 

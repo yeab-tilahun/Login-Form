@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,5 +54,14 @@ namespace day1
             layer3.DelUserByStoreProc(id);
            
         }
+
+        public DataTable getUser(string fn, string ln)
+        {
+            DAL dal = new DAL();
+            DataTable dt = dal.getUser(fn, ln);
+            
+            return dt;
+        }
+
     }
 }
