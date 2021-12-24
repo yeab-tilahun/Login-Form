@@ -56,7 +56,7 @@ namespace day1
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string query = "Select fname,mname,Username,password,Role from cslab where ID=@ID";
+           // string query = "Select fname,mname,Username,password,Role from cslab where ID=@ID";
             string constr = "Server=YEABS;   database=cslab; integrated security=true; ";
             //image
 
