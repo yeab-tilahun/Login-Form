@@ -167,13 +167,45 @@ namespace day1
             dgUser.DataSource = dt;
 
             //image
-            byte [] photo = (byte[]) dgUser.CurrentRow.Cells[6].Value;
-            MemoryStream ms = new MemoryStream(photo);
-            pictureBox1.BackgroundImage = Image.FromStream(ms);
+           
 
 
         }
 
+        private void dgUser_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        //when search result clicked it will be dislayed on the textboxes,combobox and picturebox
+
+        private void dgUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            int index = e.RowIndex;
+            DataGridViewRow SelectedRows = dgUser.Rows[index];
+                textBox1.Text =SelectedRows.Cells[0].Value.ToString();
+                textBox6.Text =SelectedRows.Cells[1].Value.ToString();
+                textBox5.Text =SelectedRows.Cells[2].Value.ToString();
+                textBox2.Text = SelectedRows.Cells[3].Value.ToString();
+                textBox3.Text = SelectedRows.Cells[4].Value.ToString();
+                comboBox1.Text = SelectedRows.Cells[5].Value.ToString();
+
+                byte[] photo = (byte[])SelectedRows.Cells[6].Value;
+                MemoryStream ms = new MemoryStream(photo);
+                pictureBox1.BackgroundImage = Image.FromStream(ms);
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Size= new Size (1130, 423);
+        }
+
+        private void linkLabel1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Size = new Size(539, 423);
+        }
     }
         }
     

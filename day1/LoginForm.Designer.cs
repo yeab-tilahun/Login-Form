@@ -56,6 +56,7 @@ namespace day1
             this.dgUser = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgUser)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +65,7 @@ namespace day1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(107, 55);
+            this.label1.Location = new System.Drawing.Point(145, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(232, 25);
             this.label1.TabIndex = 0;
@@ -137,48 +138,48 @@ namespace day1
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(152, 95);
+            this.textBox1.Location = new System.Drawing.Point(112, 92);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 20);
+            this.textBox1.Size = new System.Drawing.Size(109, 20);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(152, 185);
+            this.textBox2.Location = new System.Drawing.Point(112, 182);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(176, 20);
+            this.textBox2.Size = new System.Drawing.Size(109, 20);
             this.textBox2.TabIndex = 4;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(152, 211);
+            this.textBox3.Location = new System.Drawing.Point(112, 208);
             this.textBox3.Name = "textBox3";
             this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(176, 20);
+            this.textBox3.Size = new System.Drawing.Size(109, 20);
             this.textBox3.TabIndex = 5;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(152, 249);
+            this.textBox4.Location = new System.Drawing.Point(112, 246);
             this.textBox4.Name = "textBox4";
             this.textBox4.PasswordChar = '*';
-            this.textBox4.Size = new System.Drawing.Size(176, 20);
+            this.textBox4.Size = new System.Drawing.Size(109, 20);
             this.textBox4.TabIndex = 6;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(152, 152);
+            this.textBox5.Location = new System.Drawing.Point(112, 149);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(176, 20);
+            this.textBox5.Size = new System.Drawing.Size(109, 20);
             this.textBox5.TabIndex = 3;
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged_1);
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(152, 124);
+            this.textBox6.Location = new System.Drawing.Point(112, 121);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(176, 20);
+            this.textBox6.Size = new System.Drawing.Size(109, 20);
             this.textBox6.TabIndex = 2;
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             this.textBox6.Leave += new System.EventHandler(this.textBox6_Leave);
@@ -192,16 +193,16 @@ namespace day1
             "Admin",
             "Director",
             "Secretery"});
-            this.comboBox1.Location = new System.Drawing.Point(152, 281);
+            this.comboBox1.Location = new System.Drawing.Point(112, 278);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(146, 21);
+            this.comboBox1.Size = new System.Drawing.Size(79, 21);
             this.comboBox1.TabIndex = 7;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyUp);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(36, 338);
+            this.button1.Location = new System.Drawing.Point(20, 338);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(59, 24);
             this.button1.TabIndex = 8;
@@ -211,7 +212,7 @@ namespace day1
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(188, 339);
+            this.button3.Location = new System.Drawing.Point(172, 339);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(59, 24);
             this.button3.TabIndex = 10;
@@ -221,7 +222,7 @@ namespace day1
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(112, 338);
+            this.button4.Location = new System.Drawing.Point(96, 338);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(59, 24);
             this.button4.TabIndex = 11;
@@ -233,7 +234,7 @@ namespace day1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(402, 55);
+            this.pictureBox1.Location = new System.Drawing.Point(250, 95);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(269, 226);
             this.pictureBox1.TabIndex = 12;
@@ -242,7 +243,7 @@ namespace day1
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(483, 287);
+            this.button5.Location = new System.Drawing.Point(328, 324);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(105, 29);
             this.button5.TabIndex = 13;
@@ -254,7 +255,7 @@ namespace day1
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(718, 95);
+            this.label10.Location = new System.Drawing.Point(553, 80);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 13);
             this.label10.TabIndex = 15;
@@ -264,7 +265,7 @@ namespace day1
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(718, 67);
+            this.label11.Location = new System.Drawing.Point(553, 52);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(57, 13);
             this.label11.TabIndex = 16;
@@ -272,14 +273,14 @@ namespace day1
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(803, 92);
+            this.textBox8.Location = new System.Drawing.Point(638, 77);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(176, 20);
             this.textBox8.TabIndex = 18;
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(803, 61);
+            this.textBox9.Location = new System.Drawing.Point(638, 46);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(176, 20);
             this.textBox9.TabIndex = 19;
@@ -288,16 +289,21 @@ namespace day1
             // 
             this.dgUser.AllowUserToAddRows = false;
             this.dgUser.AllowUserToDeleteRows = false;
+            this.dgUser.BackgroundColor = System.Drawing.Color.White;
             this.dgUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgUser.Location = new System.Drawing.Point(697, 185);
+            this.dgUser.Location = new System.Drawing.Point(525, 162);
             this.dgUser.Name = "dgUser";
             this.dgUser.ReadOnly = true;
-            this.dgUser.Size = new System.Drawing.Size(330, 225);
+            this.dgUser.RowHeadersVisible = false;
+            this.dgUser.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgUser.Size = new System.Drawing.Size(586, 159);
             this.dgUser.TabIndex = 20;
+            this.dgUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgUser_CellClick);
+            this.dgUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgUser_CellContentClick);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(813, 124);
+            this.button2.Location = new System.Drawing.Point(648, 109);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 29);
             this.button2.TabIndex = 21;
@@ -309,11 +315,24 @@ namespace day1
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(418, 23);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(101, 13);
+            this.linkLabel1.TabIndex = 22;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Click here to search";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabel1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.linkLabel1_MouseDoubleClick);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1039, 494);
+            this.ClientSize = new System.Drawing.Size(523, 384);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dgUser);
             this.Controls.Add(this.textBox9);
@@ -379,6 +398,7 @@ namespace day1
         private System.Windows.Forms.DataGridView dgUser;
         private System.Windows.Forms.Button button2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 
